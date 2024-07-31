@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Tech Innovations",
+    "description": "Discover the latest advancements in technology",
+    "cta": "Learn More",
+    "background": "/adsTemplate/ads1.png"
+  },
+  {
+    "id": 2,
+    "title": "Healthy Living",
+    "description": "Tips and tricks for a healthier lifestyle",
+    "cta": "Read More",
+    "background": "/adsTemplate/ads2.png"
+  },
+  {
+    "id": 3,
+    "title": "Travel Diaries",
+    "description": "Explore new destinations and travel stories",
+    "cta": "Explore Now",
+    "background": "/adsTemplate/ads3.png"
+  },
+  {
+    "id": 4,
+    "title": "Cooking Masterclass",
+    "description": "Join our online cooking classes with top chefs",
+    "cta": "Sign Up",
+    "background": "/adsTemplate/ads4.png"
+  },
+  {
+    "id": 5,
+    "title": "Fitness Goals",
+    "description": "Achieve your fitness goals with our workout plans",
+    "cta": "Start Now",
+    "background": "/adsTemplate/ads5.png"
+  },
+  {
+    "id": 6,
+    "title": "Art and Culture",
+    "description": "Dive into the world of art and cultural events",
+    "cta": "Discover More",
+    "background": "/adsTemplate/ads6.png"
+  }
+]
