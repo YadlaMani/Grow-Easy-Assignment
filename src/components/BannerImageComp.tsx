@@ -1,6 +1,7 @@
-// components/BannerImageComp.tsx
 import React from "react";
 import html2canvas from "html2canvas";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface BannerProps {
   id: number;
@@ -30,24 +31,30 @@ const BannerImageComp: React.FC<BannerProps> = ({
       if (editButton) editButton.classList.add("hidden");
       if (downloadButton) downloadButton.classList.add("hidden");
 
-      // Capture the element
-      const canvas = await html2canvas(element, {
-        useCORS: true,
-        scale: window.devicePixelRatio, // Adjust scale for higher resolution
-      });
-      const data = canvas.toDataURL("image/jpg");
-      const link = document.createElement("a");
+      try {
+        toast.info("Preparing download...");
+        // Capture the element
+        const canvas = await html2canvas(element, {
+          useCORS: true,
+          scale: window.devicePixelRatio, // Adjust scale for higher resolution
+        });
+        const data = canvas.toDataURL("image/jpg");
+        const link = document.createElement("a");
 
-      link.href = data;
-      link.download = `banner-${id}.jpg`;
+        link.href = data;
+        link.download = `banner-${id}.jpg`;
 
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 
-      // Show the edit and download buttons again
-      if (editButton) editButton.classList.remove("hidden");
-      if (downloadButton) downloadButton.classList.remove("hidden");
+        toast.success("Download successful!");
+      } catch (error) {
+        toast.error("Download failed. Please try again.");
+      } finally {
+        if (editButton) editButton.classList.remove("hidden");
+        if (downloadButton) downloadButton.classList.remove("hidden");
+      }
     }
   };
 

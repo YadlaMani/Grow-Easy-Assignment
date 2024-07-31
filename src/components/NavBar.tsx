@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
             <FaLinkedin size={24} />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://github.com/YadlaMani/Grow-Easy-Assignment"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-400"

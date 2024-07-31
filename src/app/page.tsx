@@ -1,10 +1,11 @@
-// pages/index.tsx
 "use client";
 import { useState, useEffect } from "react";
 import BannerImageComp from "../components/BannerImageComp";
 import EditBannerTemplateBs from "../components/EditBannerTemplateBs";
 import adBannersData from "../data/adBanners.json";
-import Navbar from "../components/Navbar"; // Import the Navbar component
+import Navbar from "@/components/NavBar";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 interface Banner {
   id: number;
@@ -34,6 +35,7 @@ export default function Home() {
       )
     );
     setEditingBannerId(null);
+    toast.success("Banner updated successfully!"); // Display success toast
   };
 
   const handleClose = () => {
@@ -72,6 +74,17 @@ export default function Home() {
             </div>
           </div>
         )}
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
     </>
   );
