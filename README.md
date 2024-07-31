@@ -24,5 +24,28 @@ A Next.js web application for managing and editing ad banners. Users can view, e
 To set up the project locally, follow these steps:
 
 1. **Clone the Repository**
+```
+ git clone https://github.com/YadlaMani/Grow-Easy-Assignment.git
+```
+2. **Navigate to the Project Directory**
+```
+  cd Grow-Easy-Assignment
+```
+3. **Install Dependencies**
+  ```
+     npm install
+   ```
+4. **Run the Development Server**
+   ```
+   npm run dev
 
-  
+   ```
+
+- Open http://localhost:3000 in your browser to view the application.
+
+## Acknowledgments
+- Next.js: For building the server-side rendering and static site generation.
+- React: For building the user interface.
+- Tailwind CSS: For styling.
+- html2canvas: For capturing banner images.
+- react-icons: For social media icons.
