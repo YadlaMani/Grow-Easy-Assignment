@@ -8,7 +8,7 @@ interface BannerProps {
   title: string;
   description: string;
   cta: string;
-  image: string;
+
   background: string;
   onEdit: () => void;
 }
@@ -18,7 +18,7 @@ const BannerImageComp: React.FC<BannerProps> = ({
   title,
   description,
   cta,
-  image,
+
   background,
   onEdit,
 }) => {

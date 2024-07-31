@@ -8,7 +8,7 @@ interface Banner {
   title: string;
   description: string;
   cta: string;
-  image: string;
+
   background: string;
 }
 
@@ -24,7 +24,7 @@ const EditBannerTemplateBs: React.FC<EditBannerProps> = ({
   onClose,
 }) => {
   const [editedBanner, setEditedBanner] = useState<Banner>(banner);
-  const [imageType, setImageType] = useState<"url" | "file">("url");
+
   const [backgroundType, setBackgroundType] = useState<"url" | "file">("url");
 
   useEffect(() => {
@@ -60,7 +60,7 @@ const EditBannerTemplateBs: React.FC<EditBannerProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave(editedBanner);
-    toast.success("Banner updated successfully!"); // Show success toast
+    toast.success("Banner updated successfully!");
   };
 
   return (
